@@ -6,16 +6,6 @@ import (
 	"strings"
 )
 
-/*
-Challenge: The algorithm must balance the brackets of a string.
-- If you have an empty pair of brackets, it should be removed.
-- If you have extra closed brackets, it should be removed.
-
-Example:
-Input: “[a][b]][c]”
-Output: ”[a][b][c]”
-*/
-
 func main() {
 	const (
 		inputSample  = "[a][b]][c]"
@@ -83,6 +73,7 @@ func BalanceUsingCount(input string) string {
 	return fmt.Sprintf("[%s", strings.Join(result, "["))
 }
 
+// BalanceUsingCountFormatted receives an input string and retrieves a balanced string. Big O(n) *(it's a clean version of BalanceUsingCount)
 func BalanceUsingCountFormatted(input string) (result string) {
 	var (
 		partial string
